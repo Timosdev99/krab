@@ -127,33 +127,55 @@
 // }
 
 // struct
+// 
+
+// shawdowing 
+// fn main() {
+//     let x = 1;
+
+//     println!("this is the value of x: {}", x);
+
+//     let x = x + 1;
+
+//     println!("this is the value of x shawdowed by it self: {}", x);
+
+// }
+
+//loop
+// fn main() {
+//   let mut counter = 0;
+
+//   let result = loop {
+//      counter+= 1;
+//      println!("counter: {counter}");
+
+//      if counter == 10 {
+//         break
+//         counter * 2;
+//      }
+//   };
+
+//   println!("result: {result}")
+
+
+
+
+// }
+
+// while 
+// fn main() {
+//     let mut counter = 5;
+//     while counter != 0 {
+//          println!("{counter}");
+//          counter -= 1;
+      
+//     }
+// }
+
+// for loop
 fn main() {
-    let mut account = BankAccount{
-        owner: "Tmot".to_string(),
-        balance: 200.00
-    };
-
-    account.checkbalance();
-    account.withdrawn(150.00);
-    account.checkbalance();
-}
-
-struct BankAccount{
-    owner: String,
-    balance: f64
-}
-
-impl BankAccount {
-    fn withdrawn(&mut self, amount: f64) {
-        println!("the owner of this account is: {},\n Amount withdrawn is: {}", self.owner, amount);
-        self.balance -= amount;
+    let a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+    for numbers in a  {
+        println!("{numbers}");
     }
-   
- fn checkbalance(&self) {
-
-    println!("Account owner: {}\nnew balance: {}",  self.owner, self.balance);
-
-     
- }
-
 }
